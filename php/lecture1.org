@@ -1,0 +1,135 @@
+* Introduction to PHP
+
+Welcome to the first PHP lecture!
+
+This lecture covers:
+
+- Printing values to HTML
+- Variables
+- Strings and concatenation
+- Arithmetic operators
+- Conditional statements (if, elseif, else)
+- While and for loops
+
+PHP files always end in .php, but they can also contain HTML code
+You just need to start with this tag:
+
+#+BEGIN_SRC php
+<?php
+#+END_SRC
+
+** Printing
+To print something in PHP, use the "echo" function:
+
+#+BEGIN_SRC php
+echo "Hello, PHP!";
+#+END_SRC
+
+To print a newline character, insert an HTML <br>:
+
+#+BEGIN_SRC php
+echo "Hi,<br>How is it going?";
+#+END_SRC
+
+** Variables
+To declare a variable, its name must start with a dollar sign ($)
+
+#+BEGIN_SRC php
+$age = 32;
+$myName = "Matt";
+#+END_SRC
+
+** String Concatenation
+To print strings and variables, put a dot (.) between them:
+
+#+BEGIN_SRC php
+echo "My name is " . $myName . " and my age is " . $age . "<br>";
+#+END_SRC
+
+** Arithmetic
+PHP has all the usual arithmetic operators:
+
+
+#+BEGIN_SRC php
+2 + 3;
+3 - 4;
+3 * 3;
+44 / 3;
+23 % 4;
+#+END_SRC
+
+But it also arithmetic assignment operators. These change the value of a variable in place:
+
+#+BEGIN_SRC php
+$x = 1;
+
+$x++; // now x is 2
+$x += 1; // now x = 3
+$x -= 4; // now x = -1
+$x *= -4; // now x = 4
+$x /= 4; // now x = 1
+#+END_SRC
+
+** Data Types
+
+#+BEGIN_SRC php
+$myName = "Matt"; // string
+$myAge = 32; // integer
+$myHeight = 186.4; // double
+$isTeacher = true; // bool
+$nullVal = NULL; // NULL
+#+END_SRC
+
+** Conditional Statements
+PHP has if, elseif and else statements, they work the same way as almost every other language:
+
+#+BEGIN_SRC php
+$food = "curry";
+
+// if statement:
+if ($food == "pasta") {
+    echo "I like pasta"; // this code is executed if $food is "pasta"
+}
+
+// if and else statements:
+if ($food == "pasta") {
+    echo "I like pasta"; // this code is executed if $food is "pasta"
+} else {
+    echo "I don't like pasta"; // this code is executed if $food is NOT "pasta"
+}
+
+// if, elseif and else statements:
+if ($food == "pasta") {
+    echo "I like pasta"; // this code is executed if $food is "pasta"
+} elseif ($food == "curry") {
+    echo "I like curry"; // this code is executed if $food is "curry"
+} else {
+    echo "I don't like pasta"; // this code is executed if $food is NEITHER "pasta" or "curry"
+}
+#+END_SRC
+
+** While Loops
+A while loop will keep repeating while the condition is true:
+
+#+BEGIN_SRC php
+$cond = true;
+
+while ($cond == true) {
+    echo "This code will print over and over.<br>";
+}
+#+END_SRC
+
+** For Loops
+A for loop has three parameters: some initial statement, a conditional statement which stops the loop if false, and a statement which run after every loop:
+
+#+BEGIN_SRC php
+for ($i = 0; $i < 10; $i++) {
+    echo "i is " . $i; // this will print numbers from 0 to 9
+}
+#+END_SRC
+
+This tag ends your PHP code:
+
+#+BEGIN_SRC php
+?>
+#+END_SRC
