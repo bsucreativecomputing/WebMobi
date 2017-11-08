@@ -1,0 +1,158 @@
+* Exercises for Lecture 1
+
+** Exercise 1
+Create a page with the standard html tags:
+<html>, <head>, <body>
+
+Then write "Hello, world!" inside the body tags.
+
+** Exercise 2
+Delete the "Hello, world!" in the body tags. Instead, use the "echo" statement in PHP to print "Hello, World!" to your website.
+
+** Exercise 3
+In your script, create the following variables:
+
+#+BEGIN_SRC php
+$x = 10;
+$y = 7;
+#+END_SRC
+
+Write code to print out the following:
+
+#+BEGIN_SRC php
+10 + 7 = 17
+10 - 7 = 3
+10 * 7 = 70
+10 / 7 = 1.4285714285714
+10 % 7 = 3
+#+END_SRC
+
+Use numbers only in the above variable assignments, not in the echo statements. You will need a third variable as well.
+    
+** Exercise 4
+
+Manipulate only one variable using no simple arithmetic operators to produce the values given in the statements.
+
+Hint: In the script each statement ends with "Value is now $variable."
+    
+#+BEGIN_SRC php
+"Value is now 8.
+Add 2. Value is now 10.
+Subtract 4. Value is now 6.
+Multiply by 5. Value is now 30.
+Divide by 3. Value is now 10.
+Increment value by one. Value is now 11.
+Decrement value by one. Value is now 10."
+#+END_SRC
+
+** Exercise 5
+Write a script using the following variable:
+
+#+BEGIN_SRC php
+$around = "around";
+#+END_SRC
+
+Single quotes and double quotes don't work the same way in PHP. Using single quotes (' ') and the concatenation operator, echo the following to the browser, using the variable you created:
+
+#+BEGIN_SRC php
+"What goes around comes around."
+#+END_SRC
+
+** Exercise 6
+
+Write a script using one variable “$whatsit” to print the following to the browser. Your echo statements may include no words except “Value is”. In other words, use the function that will output the variable type to get the requested text. Use simple HTML to print each statement on its own line and add a relevant title to your page. Include line breaks in your code to produce clean, readable HTML.
+    
+Hint: use gettype($whatsit)
+    
+#+BEGIN_SRC php
+"Value is string."
+"Value is double."
+"Value is boolean."
+"Value is integer."
+"Value is NULL."
+#+END_SRC
+
+** Exercise 7
+In this PHP exercise, you will use a conditional statement to determine what gets printed to the browser. Write a script that gets the current month (You use date('F', time())) and prints one of the following responses, depending on whether it's August or not:
+
+#+BEGIN_SRC
+It's August, so it's really hot.
+Not August, so at least not in the peak of the heat.
+#+END_SRC
+
+Then expand your code (using an elseif) to also check if the month is November, and comment on the weather in both cases.
+
+Hint: the function to get the current month is 'date('F', time())' for the month's full name.
+
+
+** Exercise 8
+    
+Write a script that will print the following to the browser:
+
+#+BEGIN_SRC
+abc abc abc abc abc abc abc abc abc
+
+1 2 3 4 5 6 7 8 9
+
+Item A
+Item B
+Item C
+Item D
+Item E
+Item F
+#+END_SRC
+
+Create the 'abc' row with a while loop and the last two sections with for loops. Remember to include HTML and source code line breaks in your output.
+
+** Exercise 9
+
+Loops are very useful in creating lists and tables. In this PHP exercise, you will use a loop to create a list of equations for squares.
+
+Using a for loop, write a script that will send to the browser a list of squares for the numbers 1-12.
+
+Use the format, "1 * 1 = 1", and be sure to include code to print each formula on a different line.
+     
+** Exercise 10
+
+Write an array variable of weather conditions with the following values: rain, sunshine, clouds, hail, sleet, snow, wind. Using the array variable for all the weather conditions, echo the following statement to the browser:
+
+#+BEGIN_SRC php
+"We've seen all kinds of weather this month. At the beginning of the month, we had snow and wind. Then came sunshine with a few clouds and some rain. At least we didn't get any hail or sleet."
+#+END_SRC
+
+Don't forget to include a title for your page, both in the header and on the page itself.
+
+** Exercise 11
+
+For this exercise, you will use a list of ten of the largest cities in the world. (Please note, these are not the ten largest, just a selection of ten from the largest cities.) Create an array with the following values: Tokyo, Mexico City, New York City, Mumbai, Seoul, Shanghai, Lagos, Buenos Aires, Cairo, London.
+
+Print these values to the browser separated by commas, using a loop to iterate over the array. Sort the array, then print the values to the browser in an unordered list, again using a loop.
+
+Add the following cities to the array: Los Angeles, Calcutta, Osaka, Beijing. Sort the array again, and print it once more to the browser in an unordered list.
+
+** Exercise 12
+You will again use the list of cities in Arrays Exercise 10. Here's the list, this time including countries as well as cities:
+
+Tokyo, Japan; Mexico City, Mexico; New York City, USA; Mumbai, India; Seoul, Korea; Shanghai, China; Lagos, Nigeria; Buenos Aires, Argentina; Cairo, Egypt; London, England.
+
+This time, create an associative array, using the countries as keys, the cities as values.
+
+Create an array of country names. Loop through the array, using the names as keys to get the values from the associative array. Do this to print the following:
+
+#+BEGIN_SRC php
+"Tokyo is in Japan"
+"Mexico City is in Mexico"
+"New York City is in USA"
+#+END_SRC
+
+...etc
+
+** Exercise 13
+
+Create a function called "hello" that outputs that phrase we all know and love, "Hello, World!" to the browser. Call the function.
+
+** Exercise 14
+
+This PHP exercise has two parts. For the first, you will create a function to accept two arguments, perform a calculation using them, then return a sentence with the result to the browser.
+
+The function will calculate the area of a rectangle, with the two arguments being width and height. (Reminder: area = width * height.) The sentence to be returned is "A rectangle of length $l and width $w has an area of $area.", where $l and $w are the arguments and $area is the result.

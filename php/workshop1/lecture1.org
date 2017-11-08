@@ -18,6 +18,12 @@ You just need to start with this tag:
 <?php
 #+END_SRC
 
+...and finish with this tag:
+
+#+BEGIN_SRC php
+?>
+#+END_SRC
+
 ** Printing
 To print something in PHP, use the "echo" function:
 
@@ -44,6 +50,12 @@ To print strings and variables, put a dot (.) between them:
 
 #+BEGIN_SRC php
 echo "My name is " . $myName . " and my age is " . $age . "<br>";
+#+END_SRC
+
+A quick way to insert variables inside your strings is to put them inside double quotes ("). This doesn't work with single quotes, though:
+
+#+BEGIN_SRC php
+echo "My name is $myName and my age is $age<br>";
 #+END_SRC
 
 ** Arithmetic
@@ -128,8 +140,3 @@ for ($i = 0; $i < 10; $i++) {
 }
 #+END_SRC
 
-This tag ends your PHP code:
-
-#+BEGIN_SRC php
-?>
-#+END_SRC

@@ -1,0 +1,3 @@
+* Web and Mobile Application Development 2017/18
+  
+This repository contains the lecture notes, exercises and solutions for the Web and Mobile Application Development module in Bath Spa's Creative Computing course.
