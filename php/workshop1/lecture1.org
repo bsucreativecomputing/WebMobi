@@ -1,4 +1,4 @@
-* Introduction to PHP
+* Introduction to PHP - Part 1
 
 Welcome to the first PHP lecture!
 

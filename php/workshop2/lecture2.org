@@ -1,0 +1,76 @@
+* Introduction to PHP - Part 2
+  
+In this week's session, we'll cover:
+
+- Arrays
+- Foreach loops
+- Associative arrays
+  
+** Arrays
+   
+To create an array variable in PHP, put the elements inside square brackets and separate them with commas:
+   
+#+BEGIN_SRC php
+$weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+#+END_SRC
+
+As PHP is a /dynamic/ language, you can mix different types in the same array:
+
+#+BEGIN_SRC php
+$mixedTypes = ["hello", 12, [132, "yes"], 28.22, "bye", true];
+#+END_SRC
+
+Use the array_push() function to add elements to an array. This changes the value of the array in-place (rather than returning the changed array):
+
+#+BEGIN_SRC php
+echo $weekDays; // ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+
+array_push($weekDays, "Saturday", "Sunday"); // Note that this takes each new element as an extra argument
+
+echo $weekDays; // ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+#+END_SRC
+
+** Foreach loops
+   
+/Foreach/ loops are a very convenient way to go through each element of an array:
+
+#+BEGIN_SRC php
+// this prints each element of the $weekDays array
+foreach ($weekDays as $w) {
+  echo $w . "<br>";
+}
+#+END_SRC
+
+Each time it goes through the loop, $w is given the value of an element from the array. So in this case, the first time round $w = "Monday", then $w = "Tuesday", then $w = "Wednesday", etc.
+
+** Associative Arrays
+ 
+Associative arrays (also called "Hash maps" or "Dictionaries" in other languages) hold sets of keys and values. A key is used to look up a value that is associated with it. For example:
+
+#+BEGIN_SRC php
+$person = ["name" => "Matt", "age" => 32, "height" => "186cm", "favourite_food" => "curry"];
+#+END_SRC
+
+The "fat arrow" (=>) goes between each key - value pair, so the template is:
+
+#+BEGIN_SRC php
+key => value
+#+END_SRC
+
+You can then use a key to look up its corresponding value:
+
+#+BEGIN_SRC php
+echo $person["name"] . " is awesome<br>";
+echo "His favourite food is " . $person["favourite_food"] . ".<br>";
+#+END_SRC
+
+/Foreach/ loops can also be used to go through the items in an associative array:
+
+#+BEGIN_SRC php
+foreach ($person as $key => $value) {
+  echo $key . " is " . $value;
+}
+#+END_SRC
+
+The above goes through each item of the associative array and assigns its key to $key and the corresponding value to $value.
+
