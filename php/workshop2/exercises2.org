@@ -43,35 +43,3 @@ This PHP exercise has two parts. For the first, you will create a function to ac
 
 The function will calculate the area of a rectangle, with the two arguments being width and height. (Reminder: area = width * height.) The sentence to be returned is "A rectangle of length $l and width $w has an area of $area.", where $l and $w are the arguments and $area is the result.
 
-** Exercise 15
-Rewrite the rectangle area function from #2 once again, this time to accept user input. Present a form to the user with the message "Please enter the values of the length and width of your rectangle." Below this, supply two text boxes, one for length and one for width. Using your function to process the user supplied values, return the result statement from the previous exercise to the user. Reminder: the statement was "A rectangle of length $l and width $w has an area of $area.", where $l and $w are the arguments and $area is the result.
-
-** Exercise 16
-First create an array called $months. Use the names of the months as keys, and the number of days for each month as values. For February, use the following for your value: "28 days, if leap year 29".
-
-Next, write a function to create an option element for a form's select field. Make sure each option will be upper case. Both the array and the function should precede the HTML for the page.
-
-Once again, you will be requesting user input. Create a form for the user with the request, "Please choose a month." Next, provide a select field with the months as options, looping through the array you created and using the function to create the option elements.
-
-When the user clicks the submit button, return the statement "The month of $month has $number days.", where $month is the name of the month the user chose, and $number is the number of days. Be sure to include a different response for February.
-
-#+BEGIN_SRC php
-echo "Hello";
-#+END_SRC
-
-** Exercise 17
-Create a form asking the user for input about the weather the user has experienced in a month of the user's choice. In separate text fields, request the city, month and year in question. Below that, show a series of checkboxes using the same weather conditions you used in Exercise 10. (Those values were: rain, sunshine, clouds, hail, sleet, snow, wind.) Set up the form to create an array from the checked items.
-
-In the response section of your script, create an array using the city, month and year the user entered as values. Print the following response "In $city in the month of $month $year, you observed the following weather:", where $city, $month and $year are values from the array you created.
-
-Next, loop through the $weather[] array you received from the user to send back a bulleted list with the user's responses.
-
-** Exercise 18
-Start with the script from Exercise 17 and write a function to create form checkbox elements from the arguments supplied. This function should be able to take a variable number of arguments so that you can create any number of checkboxes calling it only once. Add your function at the beginning of your file before the HTML. Make sure each item is upper case.
-
-Now rewrite the original form presented to the user with the checkbox function. Make sure the list returned to the user in the second part of the script is also upper case.
-
-** Exercise 18
-Pull up your script from Exercise 16. The days of the month array is fine as it is. Rewrite the "option" function as "makeOptions", such that it includes all the work of creating the option. It will need to take an array as an argument and iterate over the array key values to produce the options.
-
-Write a second function, "makeSelect", to create the entire select field. This function should call the "makeOptions" function to produce the options. Give the function an error checking action to assure that the variable used for options is actually an array.
