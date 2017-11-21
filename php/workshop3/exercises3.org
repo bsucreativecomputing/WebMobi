@@ -1,6 +1,6 @@
 * Exercises for Workshop 3
 ** Exercise 15
-Rewrite the rectangle area function from #2 once again, this time to accept user input. Present a form to the user with the message "Please enter the values of the length and width of your rectangle." Below this, supply two text boxes, one for length and one for width. Using your function to process the user supplied values, return the result statement from the previous exercise to the user. Reminder: the statement was "A rectangle of length $l and width $w has an area of $area.", where $l and $w are the arguments and $area is the result.
+Rewrite the rectangle area function from Exercise 14 once again, this time to accept user input. Present a form to the user with the message "Please enter the values of the length and width of your rectangle." Below this, supply two text boxes, one for length and one for width. Using your function to process the user supplied values, return the result statement from the previous exercise to the user. Reminder: the statement was "A rectangle of length $l and width $w has an area of $area.", where $l and $w are the arguments and $area is the result.
 
 ** Exercise 16
 First create an array called $months. Use the names of the months as keys, and the number of days for each month as values. For February, use the following for your value: "28 days, if leap year 29".
