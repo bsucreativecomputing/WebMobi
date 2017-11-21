@@ -10,7 +10,7 @@ Choose a "victim" to be the recipient of a quiz that you will make. They will al
 - Questions where the user types in some text (think about how you can be flexible about accepting multiple spellings, etc)
 - Multimedia (images, videos, etc)
 
-Try to make the quiz as inventive and fun as you can, but don't make the questions *too* hard!
+The quiz can be on any subject you like. One example could be a "Which X are you?"-style quiz (where X is "Game of Thrones character", etc). Try to make the quiz as inventive and fun as you can, but don't make the questions *too* hard!
 
 ** Create a product ordering form
    
@@ -38,3 +38,25 @@ Any accessories?
 #+END_SRC
 
 The selections are then added up to give a total price for the computer being ordered.
+
+** Create a spreadsheet
+Note: this one's a *real* challenge!   
+
+See if you can create a basic spreadsheet using rows and column of text boxes. Have it so that if you enter a formula, the result is calculated on the next page when you click "submit" (along with the rest of the existing cells of the spreadsheet). The format for the formula could be something like:
+
+#+BEGIN_SRC
+= A1 + B4
+= C8 - D2
+= A4 * F3
+#+END_SRC
+
+You can check if a cell contains a number or formula by looking for the "=" sign.
+
+See if you can also support operations over ranges of cells, such as:
+
+#+BEGIN_SRC
+= SUM F2:F7
+#+END_SRC
+
+...to sum all entries from column F, row 2 to column F row 7. You may find it useful to use regular expressions for this part of the exercise.
+
