@@ -27,9 +27,9 @@ Use the ~<input>~ tag to create textboxes:
 <\form>
 #+END_SRC
 
-When the user submits the form (using the "submit" button described below), the contents of this textbox are sent to the "script.php" page where they can be retrieved with ~$_GET['username']~, [[PHP $_GET and $_POST superglobals][as described in the "superglobals section]].
+When the user submits the form (using the "submit" button described below), the contents of this textbox are sent to the "script.php" page where they can be retrieved with ~$_GET['username']~, [[#superglobals][as described in the "superglobals section]].
 
-Other types of text box can be added using the /type=""/ attribute:
+Other types of text box can be added using the ~type~ attribute:
 
 #+BEGIN_SRC html
 <form action="script.php">
@@ -60,7 +60,7 @@ This goes into the form, usually as the last item:
 <\form>
 #+END_SRC
 
-The ~name~ attribute is both the button's label and its identifier when accessed with [[PHP $_GET and $_POST superglobals][superglobal variables]].
+The ~name~ attribute is both the button's label and its identifier when accessed with [[#superglobals][superglobal variables]].
 
 When the button is clicked, all of the form's information is sent to the page specified with the form's ~action~ parameter (in this case, /script.php/). The default way to send it is using a /GET/ request, which I will now explain.
 
@@ -93,6 +93,9 @@ http://myfancyshop.com/products.php?productid=324
 #+END_SRC
 
 *** PHP $_GET and $_POST superglobals
+:PROPERTIES:
+:CUSTOM_ID: superglobals
+:END:
 Once you've sent the data to a PHP page using your web form, you need to access it using a /superglobal/ variable. This changes according to the method you've used to send the data. If you used a /GET/ request, you'd bind the form data to variables using ~$_GET['']~:
 
 #+BEGIN_SRC php
