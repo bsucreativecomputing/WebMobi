@@ -29,7 +29,7 @@ Use the ~<input>~ tag to create textboxes:
 
 When the user submits the form (using the "submit" button described below), the contents of this textbox are sent to the "script.php" page where they can be retrieved with ~$_GET['username']~, [[PHP $_GET and $_POST superglobals][as described in the "superglobals section]].
 
-Other types of text box can be added using the ~type=""~ attribute:
+Other types of text box can be added using the ~type=\"\"~ attribute:
 
 #+BEGIN_SRC html
 <form action="script.php">
