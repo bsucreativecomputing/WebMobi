@@ -1,0 +1,66 @@
+* Accessing MySQL Databases with PHP
+This session covers:
+
+- How to use PHP code to connect to MySQL databases
+- Generating SQL queries with PHP
+- Creating new databases with PHP
+- Using PHP to add tables to your database
+- Using HTML forms to add new database items
+# - Randomly generating database entries with PHP
+
+We will use the [[http://php.net/manual/en/book.mysqli.php][mysqli interface]] to connect to MySQL database from PHP code. The mysqli interface has two different ways of using it: the /object-oriented/ way and the /procedural/ way. We will be using the procedural API thoughout this course.
+
+** Connecting to a MySQL database with PHP
+First, you need to create a file called ~index.php~ somewhere on your web server. For example, if you put it in a folder called "mysql" inside XAMPP's htdocs folder, it will be accessible at this address: http://localhost/mysql. Put the usual skeleton of an HTML file inside:
+
+#+BEGIN_SRC php
+<html>
+<head><title>PHP and MySQL</title></head>
+    <body>
+    
+        <?php
+
+        // Your PHP code goes here
+
+        ?>
+    
+    </body>
+</html>
+#+END_SRC
+
+The next step is to create some variables to hold the login details for the MySQL database:
+
+#+BEGIN_SRC php
+$host = "localhost";
+$username = "matty";
+$password = "password";
+$db = "mydatabase";
+#+END_SRC
+
+We will refer to these variables when we create the database connection. This is done by using the ~mysqli_connect()~ function:
+
+#+BEGIN_SRC php
+$connection = mysqli_connect($host, $username, $password, $db);
+#+END_SRC
+
+When we call the ~mysqli_connect~ function, the result is stored in the ~$connection~ variable. This is used to store the state of the connection to the database, so that we can use it to query, make changes and close the connection when we are done.
+
+To check that the connection succeeded, use an /if/-statement:
+
+#+BEGIN_SRC php
+if($connection === false) {
+    die("ERROR: Could not connect." . mysqli_connect_error());
+}
+
+echo "Connection successful";
+#+END_SRC
+
+This checks to see if the connection was successful, then terminates the PHP script with an error message if not. If it did succeed, it prints "Connection successful".
+
+The full, complete code for connecting to the database is listed in [[file:code/1_connection.php][this file]].
+
+** Querying the database with PHP
+** Creating a new database
+** Creating a new table
+** Using a HTML form to add rows to a database
+# ** Generating random data for the database

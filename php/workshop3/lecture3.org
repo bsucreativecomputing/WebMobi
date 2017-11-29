@@ -1,0 +1,112 @@
+* Using Web Forms with PHP
+
+In this week's session, we'll cover:
+
+- Creating HTML forms (a refresher)
+- Sending HTML form data to a _different_ PHP page
+- Sending HTML form data to the _same_ PHP page
+
+** Basic HTML forms
+
+HTML forms are created using the ~<form>~ tag:
+
+#+BEGIN_SRC html
+<form action="script.php">
+<\form>
+#+END_SRC
+
+The "action" parameter specifies the name of the PHP file that the form data will be sent to.
+
+*** Text Boxes
+
+Use the ~<input>~ tag to create textboxes:
+
+#+BEGIN_SRC html
+<form action="script.php">
+  <input type="text" name="username">
+<\form>
+#+END_SRC
+
+When the user submits the form (using the "submit" button described below), the contents of this textbox are sent to the "script.php" page where they can be retrieved with ~$_GET['username']~, [[PHP $_GET and $_POST superglobals][as described in the "superglobals section]].
+
+Other types of text box can be added using the ~type=""~ attribute:
+
+#+BEGIN_SRC html
+<form action="script.php">
+  <input type="text" name="username">
+  <input type="number" name="height">
+  <input type="date" name="birthday">
+<\form>
+#+END_SRC
+
+In the above examples, the "height" textbox accepts numbers as input, and the "birthday" textbox makes it easy to enter dates.
+
+*** Submit button
+
+Once the user has entered information into the form, they need to be able to submit it for processing. This is done with the "submit" button:
+
+#+BEGIN_SRC html
+<input type="submit" name="Submit">
+#+END_SRC
+
+This goes into the form, usually as the last item:
+
+#+BEGIN_SRC html
+<form action="script.php">
+  <input type="text" name="username">
+  <input type="number" name="height">
+  <input type="date" name="birthday">
+  <input type="submit" name="Submit">
+<\form>
+#+END_SRC
+
+The ~name~ attribute is both the button's label and its identifier when accessed with [[PHP $_GET and $_POST superglobals][superglobal variables]].
+
+When the button is clicked, all of the form's information is sent to the page specified with the form's ~action~ parameter (in this case, /script.php/). The default way to send it is using a /GET/ request, which I will now explain.
+
+*** GET vs POST requests
+When you make an HTML form, you can specify the type of /request/ that is sent:
+
+#+BEGIN_SRC html
+<form action="script.php" method="post">
+</form>
+#+END_SRC
+
+The two types of requests that you need to know about are /GET/ and /POST/ requests. GET requests are sent by adding information on to the end of a URL. For example, if you type "Matt" into a text box called "name" and "32" into another text box called "age", this will appear at the end of the URL:
+
+#+BEGIN_SRC
+?name=Matt&age=32
+#+END_SRC
+
+When this is sent to your /script.php/ file, the full URL in the bar appears as:
+
+#+BEGIN_SRC
+http://localhost/forms/script.php?name=Matt&age=32
+#+END_SRC
+
+But what if you have some valuable information that you don't want to be exposed in the URL of a page? You can imagine how this could be a security risk - you don't want to see a password you've entered into a web form to appear in the URL, for example. To solve this problem, you can use the /POST/ request, which sends the information invisibly.
+
+So why use GET requests at all? Well, they can be useful in case you want to send or link to a URL with the certain parameters included. For example, if you have a web shop with a "products" page, and the product shown is dependent on parameters sent via GET, you could link to that product like this:
+
+#+BEGIN_SRC
+http://myfancyshop.com/products.php?productid=324
+#+END_SRC
+
+*** PHP $_GET and $_POST superglobals
+Once you've sent the data to a PHP page using your web form, you need to access it using a /superglobal/ variable. This changes according to the method you've used to send the data. If you used a /GET/ request, you'd bind the form data to variables using ~$_GET['']~:
+
+#+BEGIN_SRC php
+$username = $_GET['username'];
+$height = $_GET['height'];
+$birthday = $_GET['birthday'];
+#+END_SRC
+
+If you've used a /POST/ request instead, you can access the data with ~$_POST['']~:
+
+#+BEGIN_SRC php
+$username = $_GET['username'];
+$height = $_GET['height'];
+$birthday = $_GET['birthday'];
+#+END_SRC
+
+You can then use the form information using the variables you've declared.
