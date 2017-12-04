@@ -1,0 +1,8 @@
+* HTML Form Validation
+There are three layers to a web application, as the three-tier architecture describes:
+
+[[file:3tier.png]]
+
+- Presentation layer (aka UI or View layer)
+- Application layer (aka Business logic or logic layer)
+- Data layer (aka persistence or database layer)
