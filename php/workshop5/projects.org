@@ -1,0 +1,12 @@
+* Dating Website Activity
+
+The aim of this project is to create an online dating website. You can divide it up into the following tasks:
+
+1. Your database should be pretty simple: just a "users" table. Decide which attributes it needs (name, age, sex, photo (a web URL), interested in, etc).
+2. Create the database and table using a method of your choice (phpMyAdmin, PHP code or MySQL console).
+3. Create a web form so that users can add themselves to the database.
+4. Write PHP code that takes the data from the web form and puts it in the MySQL database.
+5. Write PHP code to randomly generate thousands of sample users. (HINT: You can use arrays filled with name fragments, image URLs, etc, to do this)
+6. Write a web page (with PHP) that allows a user to search and filter for potential dates. It should be a web form that allows you to select various options, sends an SQL query to the database, then displays the filtered results.
+
+We will spend the first half of the workshop doing this. In the second half, we'll add some validation to the input form and then finally do a "speed dating" activity where you can try each others' dating sites out.

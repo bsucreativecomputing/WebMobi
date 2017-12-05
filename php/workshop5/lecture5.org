@@ -1,8 +1,12 @@
 * HTML Form Validation
+Data validation is the process of making sure the data in your application is both correct and useful.
+
 There are three layers to a web application, as the three-tier architecture describes:
 
 [[file:3tier.png]]
 
-- Presentation layer (aka UI or View layer)
-- Application layer (aka Business logic or logic layer)
-- Data layer (aka persistence or database layer)
+1. Presentation layer (aka UI or View layer)
+2. Application layer (aka Business logic or logic layer)
+3. Data layer (aka persistence or database layer)
+
+
